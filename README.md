@@ -1,27 +1,39 @@
-README - Plant-Disease-Detection-A-Comparative-Analysis-of-CNN-Models
-This repository implements plant disease detection using transfer learning and custom CNN models.
+# 🌿 Plant Disease Detection: A Comparative Analysis of CNN Models
 
-Models Used:
+🔍 Project Overview
 
-EfficientNetB0:
-Training Accuracy: 99.4%
-Validation Accuracy: 98.4%
-Pretrained on ImageNet; Resized to 224x224; Added dense and dropout layers.
+Detects plant diseases from leaf images using CNN and transfer learning.
+Compares EfficientNetB0, ResNet50, InceptionV3, and a custom CNN model.
+Focuses on accuracy, generalization, and training efficiency.
 
-ResNet50:
-Training Accuracy: 99.8%
-Validation Accuracy: 97.7%
-Pretrained on ImageNet; Custom classification layers added.
+🛠️ Key Features
 
-InceptionV3:
-Training Accuracy: 65.9%
-Validation Accuracy: 63.6%
-Image resolution: 299x299; Regularized via Dropout.
+🔹 Best Model: EfficientNetB0 achieved the highest validation accuracy.
+🔹 Transfer Learning: All pretrained models used ImageNet weights.
+🔹 Custom CNN: Designed with 5 convolutional layers and dropout to reduce overfitting.
+🔹 Augmentation: Applied to enhance model robustness and generalization.
 
-Custom CNN:
-Training Accuracy: 97.8%
-Validation Accuracy: 94.5%
-Five convolutional layers; Dropout layers for overfitting reduction.
+🧪 Dataset
 
-Best Model:
-EfficientNetB0 delivers the highest accuracy with excellent generalization, making it the most effective model for plant disease classification.
+High-resolution plant leaf images across multiple disease categories.
+Preprocessed with resizing and normalization to match model requirements.
+
+📊 Results Summary
+
+| Model          | Training Accuracy | Validation Accuracy | Input Size | Notes                                |
+|----------------|-------------------|---------------------|------------|--------------------------------------|
+| EfficientNetB0 | 99.4%             | 98.4%               | 224x224    | Pretrained + Dense & Dropout layers |
+| ResNet50       | 99.8%             | 97.7%               | 224x224    | Custom classification head          |
+| InceptionV3    | 65.9%             | 63.6%               | 299x299    | Used Dropout regularization         |
+| Custom CNN     | 97.8%             | 94.5%               | 224x224    | 5 Conv layers + Dropout             |
+
+✅ Key Takeaways
+
+🌟 EfficientNetB0 offers the best balance of performance and generalization.
+🔍 ResNet50 is competitive but slightly less accurate than EfficientNet.
+📉 InceptionV3 underperformed due to possible overfitting or incompatible architecture.
+🧪 Custom CNN performs well with fewer parameters but doesn't match transfer models.
+
+🧠 Conclusion
+
+EfficientNetB0 is the most effective model for plant disease detection in this study. It combines high accuracy, generalization ability, and low computational cost—making it suitable for practical deployment in agriculture tech solutions.
